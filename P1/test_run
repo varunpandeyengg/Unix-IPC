@@ -1,0 +1,56 @@
+ 
+[vpandey@linux60806 P1]$ ./Client 
+
+Welcome to a PIST - Primitive IPC Simulation Tool!
+Cloning Client...                                 
+
+Cloning Successful!
+Spawning Server to process with PID 13023
+
+The File Server is up now. Enter commands to access the server.
+         There are five basic commands to this utility:       
+         1. READ <file_path> - trigger a read fop operation on server. The result will be given by client's stdout
+         2. DELETE <file_path> - trigger a delete fop operation on server and file will be deleted from server    
+         3. EXIT - shutdown the server gracefully and cleanup. Always recommended instead of CTRL+C               
+         4. CLEAR - clear the terminal screen                                                                     
+         5. HELP - print this command information                                                                 
+                         @PIST utility...                                                                         
+$ READ kajsdh                                                                                                     
+ Response received from Server:                                                                                   
+File path "kajsdh" does not exit.                                                                                 
+Please check the file path and try again.                                                                         
+$ READ big.txt                                                                                                    
+ Response received from Server:                                                                                   
+The Project Gutenberg EBook of The Adventures of Sherlock Holmes                                                  
+by Sir Arthur Conan Doyle                                                                                         
+(#15 in our series by Sir Arthur Conan Doyle)                                                                     
+
+Copyright laws are changing all over the world. Be sure to check the
+copyright laws for your country before downloading or redistributing
+this or any other Project Gutenberg eBook.                          
+$ CLEAR                                                             
+
+
+
+
+
+
+
+$ HELP
+         There are file basic commands to this utility:
+         1. READ <file_path> - trigger a read fop operation on server. The result will be given by client's stdout
+         2. DELETE <file_path> - trigger a delete fop operation on server and file will be deleted from server
+         3. EXIT - shutdown the server gracefully and cleanup. Always recommended instead of CTRL+C
+         4. CLEAR - clear the terminal screen
+         5. HELP - print this command information
+                         @PIST utility...
+$ DELETE alkjshdkj
+ Response received from Server:
+File path "alkjshdkj" does not exit.
+Please check the file path and try again.
+$ DELETE big.txt
+ Response received from Server:
+File deleted!!!
+$ EXIT
+
+Terminating now...

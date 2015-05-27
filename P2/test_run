@@ -1,0 +1,397 @@
+
+[vpandey@linux60814 P2]$ ./ipc_utility -j ashdasd
+./ipc_utility: invalid option -- 'j'             
+         Illegal Usage. Expected option <-i>. Correct usage for the this utility is:
+         ./ipc_utility -i <ipc_name>                                                     
+         Following are the expected IPC name. Please Note that these are case sensitive.
+         1. PIPE                                                                        
+         2. FIFO                                                                        
+         3. POSIX_MSG_Q                                                                 
+         4. SYSTEMV_MSG_Q                                                               
+                         @IIST utility...                                               
+[vpandey@linux60816 P2]$ ./ipc_utility -i PIPE
+
+Welcome to a IIST - Intermediate IPC Simulation Tool!
+Cloning Client...
+
+Cloning Successful!
+Spawning Server to process with PID 24956
+
+The File Server is up now. Enter commands to access the server.
+         There are five basic commands to this utility:
+         1. LS                  - lists all the files and directories in the cur
+         2. READ <file_path>    - trigger a read fop operation on server. The re
+         3. DELETE <file_path>  - trigger a delete fop operation on server and f
+         4. CLEAR               - clear the terminal screen
+         5. HELP                - print this command information
+         6. EXIT                - shutdown the server gracefully and cleanup. Al
+                         @IIST utility...
+$ READ big.txt
+ Response received from Server: sdhjhsgdas
+dasdja
+sdajsda
+sdlaksjd
+asdjalsdjajsd
+asdlka
+s'ldlkasd
+lalskd
+a'lsdka
+sdlaksd
+a'sdk
+;l
+l
+as;ld
+a;lsd
+;l
+;l
+;lasd
+
+
+as;dl;alskd;lka;slkd;aks;dlka;lskd
+
+
+$
+$
+$
+$
+$ CLEAR
+$ HELP
+         There are five basic commands to this utility:
+         1. LS                  - lists all the files and directories in the cur
+         2. READ <file_path>    - trigger a read fop operation on server. The re
+         3. DELETE <file_path>  - trigger a delete fop operation on server and f
+         4. CLEAR               - clear the terminal screen
+         5. HELP                - print this command information
+         6. EXIT                - shutdown the server gracefully and cleanup. Al
+                         @IIST utility...
+$ LS
+.
+..
+big_copy.txt
+big.txt
+clean.sh
+common_includes.h
+ipc_utility
+ipc_utility.c
+Makefile
+ReadMe
+test_run
+test_run~
+$ DELETE lsaclkjasd
+ Response received from Server: File path "lsaclkjasd" does not exit.
+Please check the file path and try again.
+
+$ READ aksdkjashkd
+ Response received from Server: File path "aksdkjashkd" does not exit.
+Please check the file path and try again.
+
+$ akshdkj
+
+Bad command or file name
+./ipc_utility is unabe to recognize input token "akshdkj"
+The correct usage of the File server is as followes -
+         There are five basic commands to this utility:
+         1. LS                  - lists all the files and directories in the cur
+         2. READ <file_path>    - trigger a read fop operation on server. The re
+         3. DELETE <file_path>  - trigger a delete fop operation on server and f
+         4. CLEAR               - clear the terminal screen
+         5. HELP                - print this command information
+         6. EXIT                - shutdown the server gracefully and cleanup. Al
+                         @IIST utility...
+$ DELETE big.txt
+ Response received from Server: File deleted!!!
+
+$ LS
+.
+..
+big_copy.txt
+clean.sh
+common_includes.h
+ipc_utility
+ipc_utility.c
+Makefile
+ReadMe
+test_run
+test_run~
+$ EXIT
+
+Terminating now...
+[vpandey@linux60816 P2]$ ps -a
+  PID TTY          TIME CMD
+24979 pts/2    00:00:00 ps
+[vpandey@linux60814 P2]$ ./ipc_utility -i FIFO
+
+Welcome to a IIST - Intermediate IPC Simulation Tool!
+Cloning ipc_utility...                                    
+
+Cloning Successful!
+Spawning Server to process with PID 4963
+
+The File Server is up now. Enter commands to access the server.
+         There are five basic commands to this utility:        
+         1. READ <file_path>    - trigger a read fop operation on server. The result will be given by ipc_utility's stdout
+         2. DELETE <file_path>  - trigger a delete fop operation on server and file will be deleted from server      
+         3. EXIT                - shutdown the server gracefully and cleanup. Always recommended instead of CTRL+C   
+         4. CLEAR               - clear the terminal screen                                                          
+         5. LS                  - lists all the files and directories in the current folder                          
+         6. HELP                - print this command information                                                     
+                         @IIST utility...                                                                            
+$ READ big.txt                                                                                                       
+ Response received from Server: File path "big.txt" does not exit.                                                   
+Please check the file path and try again.                                                                            
+
+$ kjhkjhsa
+
+Bad command or file name
+./ipc_utility is unabe to recognize input token "kjhkjhsa"
+The correct usage of the File server is as followes -
+         There are five basic commands to this utility: 
+         1. READ <file_path>    - trigger a read fop operation on server. The result will be given by ipc_utility's stdout
+         2. DELETE <file_path>  - trigger a delete fop operation on server and file will be deleted from server      
+         3. EXIT                - shutdown the server gracefully and cleanup. Always recommended instead of CTRL+C   
+         4. CLEAR               - clear the terminal screen                                                          
+         5. LS                  - lists all the files and directories in the current folder                          
+         6. HELP                - print this command information                                                     
+                         @IIST utility...                                                                            
+$ laskjdlkj alksjd lakjsd                                                                                            
+
+Bad command or file name
+./ipc_utility is unabe to recognize input token "laskjdlkj"
+The correct usage of the File server is as followes - 
+         There are five basic commands to this utility: 
+         1. READ <file_path>    - trigger a read fop operation on server. The result will be given by ipc_utility's stdout
+         2. DELETE <file_path>  - trigger a delete fop operation on server and file will be deleted from server      
+         3. EXIT                - shutdown the server gracefully and cleanup. Always recommended instead of CTRL+C   
+         4. CLEAR               - clear the terminal screen                                                          
+         5. LS                  - lists all the files and directories in the current folder                          
+         6. HELP                - print this command information                                                     
+                         @IIST utility...                                                                            
+$                                                                                                                    
+$                                                                                                                    
+$                                                                                                                    
+$                                                                                                                    
+$                                                                                                                    
+$                                                                                                                    
+$                                                                                                                    
+$                                                                                                                    
+$ READ big.txt                                                                                                       
+ Response received from Server: sdhjhsgdas                                                                           
+dasdja                                                                                                               
+sdajsda                                                                                                              
+sdlaksjd                                                                                                             
+asdjalsdjajsd                                                                                                        
+asdlka                                                                                                               
+s'ldlkasd                                                                                                            
+lalskd                                                                                                               
+a'lsdka                                                                                                              
+sdlaksd                                                                                                              
+a'sdk                                                                                                                
+;l                                                                                                                   
+l                                                                                                                    
+as;ld                                                                                                                
+a;lsd                                                                                                                
+;l                                                                                                                   
+;l                                                                                                                   
+;lasd                                                                                                                
+
+
+as;dl;alskd;lka;slkd;aks;dlka;lskd
+                                  
+
+$ DELETE
+
+Bad command or file name
+./ipc_utility is unabe to recognize input token "(null)"
+The correct usage of the File server is as followes -
+         There are five basic commands to this utility: 
+         1. READ <file_path>    - trigger a read fop operation on server. The result will be given by ipc_utility's stdout
+         2. DELETE <file_path>  - trigger a delete fop operation on server and file will be deleted from server      
+         3. EXIT                - shutdown the server gracefully and cleanup. Always recommended instead of CTRL+C   
+         4. CLEAR               - clear the terminal screen                                                          
+         5. LS                  - lists all the files and directories in the current folder                          
+         6. HELP                - print this command information                                                     
+                         @IIST utility...                                                                            
+$ DELETE big.txt                                                                                                     
+ Response received from Server: File deleted!!!                                                                      
+
+$ EXIT
+
+Terminating now... 
+[vpandey@linux60814 P2]$ clear
+[vpandey@linux60814 P2]$ ./ipc_utility 
+         Illegal Usage. Expected option <-i>. Correct usage for the this utility is:
+         ./ipc_utility -i <ipc_name>                                                     
+         Following are the expected IPC name. Please Note that these are case sensitive.
+         1. PIPE                                                                        
+         2. FIFO                                                                        
+         3. POSIX_MSG_Q                                                                 
+         4. SYSTEMV_MSG_Q                                                               
+                         @IIST utility...                                               
+[vpandey@linux60814 P2]$ ps -a
+  PID TTY          TIME CMD   
+ 2013 pts/1    00:00:00 vim   
+ 4984 pts/11   00:00:00 vim   
+ 4992 pts/10   00:00:00 ps    
+14021 pts/4    00:00:00 vim   
+[vpandey@linux60814 P2]$ ./ipc_utility -i SYSTEMV_MSG_Q
+
+Welcome to a IIST - Intermediate IPC Simulation Tool!
+Cloning ipc_utility...                                    
+
+Cloning Successful!
+Spawning Server to process with PID 5013
+
+The File Server is up now. Enter commands to access the server.
+         There are five basic commands to this utility:        
+         1. READ <file_path>    - trigger a read fop operation on server. The result will be given by ipc_utility's stdout
+         2. DELETE <file_path>  - trigger a delete fop operation on server and file will be deleted from server      
+         3. EXIT                - shutdown the server gracefully and cleanup. Always recommended instead of CTRL+C   
+         4. CLEAR               - clear the terminal screen                                                          
+         5. LS                  - lists all the files and directories in the current folder                          
+         6. HELP                - print this command information                                                     
+                         @IIST utility...                                                                            
+$ READ big.txt                                                                                                       
+ Response received from Server: sdhjhsgdas                                                                           
+dasdja                                                                                                               
+sdajsda                                                                                                              
+sdlaksjd                                                                                                             
+asdjalsdjajsd                                                                                                        
+asdlka                                                                                                               
+s'ldlkasd                                                                                                            
+lalskd                                                                                                               
+a'lsdka                                                                                                              
+sdlaksd                                                                                                              
+a'sdk                                                                                                                
+;l                                                                                                                   
+l                                                                                                                    
+as;ld                                                                                                                
+a;lsd                                                                                                                
+;l                                                                                                                   
+;l                                                                                                                   
+;lasd                                                                                                                
+
+
+as;dl;alskd;lka;slkd;aks;dlka;lskd
+                                  
+
+$ READ
+
+Bad command or file name
+./ipc_utility is unabe to recognize input token "(null)"
+The correct usage of the File server is as followes -
+         There are five basic commands to this utility: 
+         1. READ <file_path>    - trigger a read fop operation on server. The result will be given by ipc_utility's stdout
+         2. DELETE <file_path>  - trigger a delete fop operation on server and file will be deleted from server      
+         3. EXIT                - shutdown the server gracefully and cleanup. Always recommended instead of CTRL+C   
+         4. CLEAR               - clear the terminal screen                                                          
+         5. LS                  - lists all the files and directories in the current folder                          
+         6. HELP                - print this command information                                                     
+                         @IIST utility...                                                                            
+$ DELETE big.txt                                                                                                     
+ Response received from Server: File deleted!!!                                                                      
+
+$ LS    
+.       
+..      
+big_copy.txt
+clean.sh    
+ipc_utility      
+ipc_utility.c    
+common_includes.h
+common_includes.h~
+Makefile          
+ReadMe            
+Server            
+server.c          
+test_run          
+$ CLEAR           
+$ HELP
+         There are five basic commands to this utility: 
+         1. READ <file_path>    - trigger a read fop operation on server. The result will be given by ipc_utility's stdout
+         2. DELETE <file_path>  - trigger a delete fop operation on server and file will be deleted from server      
+         3. EXIT                - shutdown the server gracefully and cleanup. Always recommended instead of CTRL+C   
+         4. CLEAR               - clear the terminal screen                                                          
+         5. LS                  - lists all the files and directories in the current folder                          
+         6. HELP                - print this command information                                                     
+                         @IIST utility...
+$ EXIT
+
+Terminating now...
+[vpandey@linux60814 P2]$ ps -a
+  PID TTY          TIME CMD
+ 2013 pts/1    00:00:00 vim
+ 5094 pts/11   00:00:00 vim
+ 5095 pts/10   00:00:00 ps
+14021 pts/4    00:00:00 vim
+[vpandey@linux60814 P2]$ ./ipc_utility -i SYSTEMV_MSG_Q
+
+Welcome to a IIST - Intermediate IPC Simulation Tool!
+Cloning ipc_utility...
+
+Cloning Successful!
+Spawning Server to process with PID 5115
+
+The File Server is up now. Enter commands to access the server.
+         There are five basic commands to this utility:
+         1. READ <file_path>    - trigger a read fop operation on server. The result will be given by ipc_utility's stdout
+         2. DELETE <file_path>  - trigger a delete fop operation on server and file will be deleted from server
+         3. EXIT                - shutdown the server gracefully and cleanup. Always recommended instead of CTRL+C
+         4. CLEAR               - clear the terminal screen
+         5. LS                  - lists all the files and directories in the current folder
+         6. HELP                - print this command information
+                         @IIST utility...
+$ READ big.txt
+ Response received from Server: sdhjhsgdas
+dasdja
+sdajsda
+sdlaksjd
+asdjalsdjajsd
+asdlka
+s'ldlkasd
+lalskd
+a'lsdka
+sdlaksd
+a'sdk
+;l
+l
+as;ld
+a;lsd
+;l
+;l
+;lasd
+
+
+as;dl;alskd;lka;slkd;aks;dlka;lskd
+
+
+$ DELETE big.txt
+ Response received from Server: File deleted!!!
+
+$ EXIT
+
+Terminating now...
+[vpandey@linux60814 P2]$ ps -a
+  PID TTY          TIME CMD
+ 2013 pts/1    00:00:00 vim
+ 5135 pts/11   00:00:00 vim
+ 5136 pts/10   00:00:00 ps
+14021 pts/4    00:00:00 vim
+[vpandey@linux60814 P2]$
+
+
+//Checked For System V Msg Q in ipsc (seperate terminal)
+[vpandey@linux60814 P2]$ ipcs -q
+------ Message Queues --------
+key        msqid      owner      perms      used-bytes   messages    
+0x61020001 229376     vpandey    644        0            0           
+0x53021e9b 98305      sharihar   666        0            0           
+
+[vpandey@linux60814 P2]$ ipcs -q
+
+------ Shared Memory Segments --------
+key        shmid      owner      perms      bytes      nattch     status      
+0x00000000 30179328   vpandey    700        8832000    2          dest         
+
+------ Message Queues --------
+key        msqid      owner      perms      used-bytes   messages
+0x53021e9b 98305      sharihar   666        0            0

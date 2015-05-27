@@ -1,0 +1,45 @@
+   
+
+							Primitive IPC Simulation Tool - Read Me
+							=======================================
+
+Welcome to a PIST - Primitive IPC Simulation Tool! This is a Read me file that will walk you through the basic functionality of the project.
+
+This project uses following files. All the files have individual help information. Please refer for details.
+	a. common_includes.h
+	b. client.c
+	c. server.c
+	d. Makefile
+
+Client module is responsible of taking user's request and transfering it to the Server. Client also invokes the server. All communication  
+are synced through SIGUSR1. If everything works alright, you will see an internal commandline '$'. Press EXIT to terminame. 
+
+The project is executed by running the client (./Client). This triggers the following chain of events.
+	1. Invoke Server by Cloning Client.
+	2. Spawning Server to process (./Server)
+
+For synchronization, signal SIGUSR1 is used. This is used for alerting that request/response is avaibable.
+All the communication is done by a file. This file is "./ipc". Although it can be controlled by editing common_includes.h
+
+Limited command size is imposed assuming that file path won't excceed PATH_MAX charecters.
+Client Tokenizes the user i/p command by breaking the incoming commands with boundary condition as - ' ' or '\n'
+
+Client uses the following protocol to communicate with the server. 
+		      <Command_number>:<file_path>
+
+Server simply rights the output and the result is displayed to user by the dumb client  
+
+Command Number used for the protocol are as follows - 
+        a. command_not_set = 0
+        b. command_read = 1
+        c. command_delete = 2
+        d. command_exit = 3
+	e. command_bad = 4
+
+
+There are five basic commands to this utility:
+         1. READ <file_path> - trigger a read fop operation on server. The result will be given by client's stdout
+         2. DELETE <file_path> - trigger a delete fop operation on server and file will be deleted from server    
+         3. EXIT - shutdown the server gracefully and cleanup. Always recommended instead of CTRL+C               
+         4. CLEAR - clear the terminal screen                                                                     
+         5. HELP - print this command information    

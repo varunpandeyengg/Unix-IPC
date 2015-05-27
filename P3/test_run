@@ -1,0 +1,255 @@
+[vpandey@linux60802 P3]$ ./Client                                                                               
+         Illegal Usage. Expected option <-i>. Correct usage for the this utility is:
+         ./Client -i <ipc_name>
+         Following are the expected IPC name. Please Note that these are case sensitive.
+         1. POSIX_SHM
+         2. SYSTEMV_SHM
+                         @IIST utility...
+[vpandey@linux60802 P3]$ ./Client -i POSIX_SHM
+
+Welcome to a AIST - Advance IPC Simulation Tool!
+Cloning Server...
+
+Cloning Successful!
+Spawning Server to process with PID 20497
+
+The File Server is up now. Enter commands to access the server.
+         There are five basic commands to this utility:
+         1. LS                  - lists all the files and directories in the current folder
+         2. READ <file_path>    - trigger a read fop operation on server. The result will be given by ipc_utility's stdout
+         3. DELETE <file_path>  - trigger a delete fop operation on server and file will be deleted from server
+         4. CLEAR               - clear the terminal screen
+         5. HELP                - print this command information
+         6. EXIT                - shutdown the server gracefully and cleanup. Always recommended instead of CTRL+C
+                         @IIST utility...
+$ READ big.txt
+ Response received from Server: kjsdhk
+
+
+$ READ big.txt1
+ Response received from Server: kjsdhklajsdh
+a sdljh
+asd kljha sd
+ aksjld
+a sdljna s;d ;las d
+ak;skd
+ a;lsd
+]as;kdm
+a'sl d'a;sd
+;k a
+sd
+;aksd
+ ;as'dlk
+
+
+
+$ DELETE big.txt
+ Response received from Server: File deleted!!!
+
+$ LS
+.
+..
+big.txt1
+clean.sh
+Client
+client.c
+common_includes.h
+ipc
+Makefile
+.nfs000000008a0e96ac00000288
+.nfs000000008feaf1bb00000278
+ReadMe
+Server
+server.c
+test_run
+$
+$
+$
+$
+$ CLEAR
+
+
+
+
+
+
+
+
+
+
+
+
+$ HELP
+         There are five basic commands to this utility:
+         1. LS                  - lists all the files and directories in the current folder
+         2. READ <file_path>    - trigger a read fop operation on server. The result will be given by ipc_utility's stdout
+         3. DELETE <file_path>  - trigger a delete fop operation on server and file will be deleted from server
+         4. CLEAR               - clear the terminal screen
+         5. HELP                - print this command information
+         6. EXIT                - shutdown the server gracefully and cleanup. Always recommended instead of CTRL+C
+                         @IIST utility...
+$
+$ EXIT
+
+Terminating now...
+[vpandey@linux60802 P3]$ ./Client -i SYSTEMV_SHM
+
+Welcome to a AIST - Advance IPC Simulation Tool!
+Cloning Server...                               
+
+Cloning Successful!
+Spawning Server to process with PID 21510
+
+The File Server is up now. Enter commands to access the server.
+         There are five basic commands to this utility:        
+         1. LS                  - lists all the files and directories in the current folder
+         2. READ <file_path>    - trigger a read fop operation on server. The result will be given by ipc_utility's stdout
+         3. DELETE <file_path>  - trigger a delete fop operation on server and file will be deleted from server           
+         4. CLEAR               - clear the terminal screen                                                               
+         5. HELP                - print this command information                                                          
+         6. EXIT                - shutdown the server gracefully and cleanup. Always recommended instead of CTRL+C        
+                         @IIST utility...                                                                                 
+$ LS                                                                                                                      
+.                                                                                                                         
+..                                                                                                                        
+big.txt                                                                                                                   
+big.txt1                                                                                                                  
+clean.sh                                                                                                                  
+Client                                                                                                                    
+client.c                                                                                                                  
+common_includes.h                                                                                                         
+Makefile                                                                                                                  
+.nfs000000008a0e96ac00000288                                                                                              
+.nfs000000008feaf1bb00000278                                                                                              
+ReadMe                                                                                                                    
+Server
+server.c
+test_run
+$ READ big.txt
+ Response received from Server: kjsdhklajsdh
+a sdljh
+asd kljha sd
+ aksjld
+a sdljna s;d ;las d
+ak;skd
+ a;lsd
+]as;kdm
+a'sl d'a;sd
+;k a
+sd
+;aksd
+ ;as'dlk
+
+
+
+$ READ big1.txt
+ Response received from Server: File path "big1.txt" does not exit.
+Please check the file path and try again.
+
+$ READ big.txt1
+ Response received from Server: kjsdhklajsdh
+a sdljh
+asd kljha sd
+ aksjld
+a sdljna s;d ;las d
+ak;skd
+ a;lsd
+]as;kdm
+a'sl d'a;sd
+;k a
+sd
+;aksd
+ ;as'dlk
+
+
+
+$ DELETE big1.txt
+ Response received from Server: File path "big1.txt" does not exit.
+Please check the file path and try again.
+
+$ DELETE big.txt1
+ Response received from Server: File deleted!!!
+
+$ LS
+.
+..
+big.txt
+clean.sh
+Client
+client.c
+common_includes.h
+Makefile
+.nfs000000008a0e96ac00000288
+.nfs000000008feaf1bb00000278
+ReadMe
+Server
+server.c
+test_run
+$ CLEAR 
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+$ HELP
+         There are five basic commands to this utility:
+         1. LS                  - lists all the files and directories in the current folder
+         2. READ <file_path>    - trigger a read fop operation on server. The result will be given by ipc_utility's stdout
+         3. DELETE <file_path>  - trigger a delete fop operation on server and file will be deleted from server
+         4. CLEAR               - clear the terminal screen
+         5. HELP                - print this command information
+         6. EXIT                - shutdown the server gracefully and cleanup. Always recommended instead of CTRL+C
+                         @IIST utility...
+$ EXIT
+
+Terminating now...
+[vpandey@linux60802 P3]$
+
+
+//Seperate terminal
+1. When System V shared Memory is created
+------ Shared Memory Segments --------
+key        shmid      owner      perms      bytes      nattch     status
+0x00000000 936804352  vpandey    700        8832000    2          dest
+0x53021e4b 465600513  sharihar   666        100        0
+0x41219ce8 472481794  58         660        2048       0
+0x73021129 918323203  sjayaram   666        5336       0
+0x61021129 918355972  sjayaram   666        4336       0
+
+------ Semaphore Arrays --------
+key        semid      owner      perms      nsems
+0x5302193a 327683     sharihar   666        2
+0x610216fd 884740     sjayaram   666        1
+0x6102170f 917509     sjayaram   666        1
+
+------ Message Queues --------
+key        msqid      owner      perms      used-bytes   messages
+0x6221d400 1212449    rputtagu   666        0            0
+
+2. Cleaned up after termination
+1. When System V shared Memory is created
+------ Shared Memory Segments --------
+key        shmid      owner      perms      bytes      nattch     status
+0x53021e4b 465600513  sharihar   666        100        0
+0x41219ce8 472481794  58         660        2048       0
+0x73021129 918323203  sjayaram   666        5336       0
+0x61021129 918355972  sjayaram   666        4336       0
+
+------ Semaphore Arrays --------
+key        semid      owner      perms      nsems
+0x5302193a 327683     sharihar   666        2
+0x610216fd 884740     sjayaram   666        1
+0x6102170f 917509     sjayaram   666        1
+
+------ Message Queues --------
+key        msqid      owner      perms      used-bytes   messages
+0x6221d400 1212449    rputtagu   666        0            0

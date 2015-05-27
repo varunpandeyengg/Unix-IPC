@@ -1,0 +1,70 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BACKLOG	common_includes.h	91;"	d
+BAD_USAGE	common_includes.h	80;"	d
+BASE10	common_includes.h	54;"	d
+BASE10	common_includes.h	90;"	d
+CC	Makefile	/^CC=gcc$/;"	m
+CCFlags	Makefile	/^CCFlags=-lrt $/;"	m
+CHECK	common_includes.h	92;"	d
+COMMAND_LS	common_includes.h	101;"	d
+COMMON_INCLUDES	common_includes.h	10;"	d
+CONNECTION_DETAILS	common_includes.h	86;"	d
+FILE_MODE	common_includes.h	103;"	d
+IPC_OPEN_ERR	common_includes.h	104;"	d
+MAX_BUFFER_SIZE	common_includes.h	49;"	d
+POSIX_SEM_NAME	common_includes.h	47;"	d
+PRINT_USAGE	common_includes.h	69;"	d
+SERVER_FILE_PATH	common_includes.h	46;"	d
+STR_GETOPT	common_includes.h	52;"	d
+USAGE_EXIT	common_includes.h	56;"	d
+ZERO	common_includes.h	51;"	d
+addr_length	server.c	/^static socklen_t addr_length = 0;$/;"	v	file:
+client	client.c	/^static void client (ipc_mode_t ipc_mode)$/;"	f	file:
+client_addr	server.c	/^static struct sockaddr_in client_addr;$/;"	v	typeref:struct:sockaddr_in	file:
+close_ipc	client.c	/^void close_ipc (ipc_t* ipc_desc)$/;"	f
+close_ipc	server.c	/^void close_ipc (ipc_t* ipc_desc)$/;"	f
+display_result	client.c	/^void display_result (const char const *buffer)$/;"	f
+get_line	client.c	/^static int get_line(char *buffer, size_t max)$/;"	f	file:
+get_line	server.c	/^int get_line(char *buffer, size_t max)$/;"	f
+interpret_command	client.c	/^void interpret_command (char* token, ipc_command *user_command)$/;"	f
+ipc_command	common_includes.h	/^} ipc_command;$/;"	t	typeref:enum:__anon1
+ipc_command_bad	common_includes.h	/^        ipc_command_bad$/;"	e	enum:__anon1
+ipc_command_clear	common_includes.h	/^        ipc_command_clear,$/;"	e	enum:__anon1
+ipc_command_delete	common_includes.h	/^        ipc_command_delete,$/;"	e	enum:__anon1
+ipc_command_exit	common_includes.h	/^        ipc_command_exit,$/;"	e	enum:__anon1
+ipc_command_help	common_includes.h	/^        ipc_command_help,$/;"	e	enum:__anon1
+ipc_command_ls	common_includes.h	/^        ipc_command_ls,$/;"	e	enum:__anon1
+ipc_command_not_set	common_includes.h	/^        ipc_command_not_set,$/;"	e	enum:__anon1
+ipc_command_read	common_includes.h	/^        ipc_command_read,$/;"	e	enum:__anon1
+ipc_mode	client.c	/^static ipc_mode_t ipc_mode = ipc_mode_not_set;$/;"	v	file:
+ipc_mode	server.c	/^static ipc_mode_t ipc_mode = ipc_mode_not_set;$/;"	v	file:
+ipc_mode_not_set	common_includes.h	/^        ipc_mode_not_set,$/;"	e	enum:__anon2
+ipc_mode_t	common_includes.h	/^} ipc_mode_t;$/;"	t	typeref:enum:__anon2
+ipc_mode_tcp_sock	common_includes.h	/^        ipc_mode_tcp_sock$/;"	e	enum:__anon2
+ipc_mode_udp_sock	common_includes.h	/^        ipc_mode_udp_sock,$/;"	e	enum:__anon2
+ipc_t	common_includes.h	/^} ipc_t;$/;"	t	typeref:union:__anon3
+lock	client.c	/^static ipc_t lock;$/;"	v	file:
+main	client.c	/^int main (int argc, char * const *argv)$/;"	f
+main	server.c	/^int main (int argc, char * const *argv)$/;"	f
+open_ipc	client.c	/^bool open_ipc (ipc_t* ipc_desc)$/;"	f
+open_ipc	server.c	/^bool open_ipc (ipc_t* ipc_desc)$/;"	f
+port_no	client.c	/^static const char * port_no;$/;"	v	file:
+primary_ip_addr	server.c	/^void primary_ip_addr (char const * ip_addr) {$/;"	f
+process_file	server.c	/^void process_file (ipc_command user_command, char* file_path, char* buffer)$/;"	f
+program_name	client.c	/^static const char * program_name;$/;"	v	file:
+program_name	server.c	/^static const char* program_name;$/;"	v	file:
+recv_data	client.c	/^void recv_data (ipc_t ipc_desc, char *buffer)$/;"	f
+recv_data	server.c	/^void recv_data (ipc_t ipc_desc, char *buffer)$/;"	f
+send_data	client.c	/^void send_data (ipc_t ipc_desc, char const *buffer)$/;"	f
+send_data	server.c	/^void send_data (ipc_t ipc_desc, char const *buffer)$/;"	f
+server	server.c	/^void server (ipc_mode_t ipc_mode)$/;"	f
+server_addr	client.c	/^static struct sockaddr_in* server_addr;$/;"	v	typeref:struct:sockaddr_in	file:
+server_name	client.c	/^static char * server_name = "linux.dc.engr.scu.edu";$/;"	v	file:
+server_sock_fd	server.c	/^static int server_sock_fd = -1;$/;"	v	file:
+tcp_fd	common_includes.h	/^        int 	tcp_fd;$/;"	m	union:__anon3
+udp_fd	common_includes.h	/^        int   	udp_fd;$/;"	m	union:__anon3

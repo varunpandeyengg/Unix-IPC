@@ -1,0 +1,270 @@
+[vpandey@linux60807 P4]$ ./Client -i TCP -h 129.210.16.17 -p 37426
+
+Welcome to a SIST - Socket IPC Simulation Tool!
+open_ipc:299: "Fatal Error. Connection Failed!": No route to host
+[vpandey@linux60807 P4]$ ./Client -i TCP -h 129.210.16.76 -p 37426
+
+Welcome to a SIST - Socket IPC Simulation Tool!
+         There are five basic commands to this utility: 
+         1. LS                  - lists all the files and directories in the current folder
+         2. READ <file_path>    - trigger a read fop operation on server. The result will be given by ipc_utility's stdout
+         3. DELETE <file_path>  - trigger a delete fop operation on server and file will be deleted from server           
+         4. CLEAR               - clear the terminal screen                                                               
+         5. HELP                - print this command information                                                          
+         6. EXIT                - shutdown the server gracefully and cleanup. Always recommended instead of CTRL+C        
+                         @SIST utility...                                                                                 
+$ READ big.txt                                                                                                            
+ Response received from Server: kjsdhklajsdh                                                                              
+a sdljh                                                                                                                   
+asd kljha sd                                                                                                              
+ aksjld                                                                                                                   
+a sdljna s;d ;las d                                                                                                       
+ak;skd                                                                                                                    
+ a;lsd                                                                                                                    
+]as;kdm                                                                                                                   
+a'sl d'a;sd                                                                                                               
+;k a                                                                                                                      
+sd                                                                                                                        
+;aksd                                                                                                                     
+ ;as'dlk                                                                                                                  
+
+ 
+
+$ DELETE big1.txt
+ Response received from Server: File path "big1.txt" does not exit.
+Please check the file path and try again.                          
+                                                                                                                                                                                                                                             
+$ DELETE big.txt1                                                                                                                                                                                                                            
+ Response received from Server: File deleted!!!                                                                                                                                                                                              
+                                                                                                                                                                                                                                             
+$ ls                                                                                                                                                                                                                                         
+                                                                                                                                                                                                                                             
+Bad command or file name                                                                                                                                                                                                                     
+./Client is unabe to recognize input token "ls"                                                                                                                                                                                              
+The correct usage of the File server is as followes -                                                                                                                                                                                        
+         There are five basic commands to this utility:                                                                                                                                                                                      
+         1. LS                  - lists all the files and directories in the current folder                                                                                                                                                  
+         2. READ <file_path>    - trigger a read fop operation on server. The result will be given by ipc_utility's stdout                                                                                                                   
+         3. DELETE <file_path>  - trigger a delete fop operation on server and file will be deleted from server                                                                                                                              
+         4. CLEAR               - clear the terminal screen                                                                                                                                                                                  
+         5. HELP                - print this command information                                                                                                                                                                             
+         6. EXIT                - shutdown the server gracefully and cleanup. Always recommended instead of CTRL+C                                                                                                                           
+                         @SIST utility...                                                                                                                                                                                                    
+$ LS                                                                                                                                                                                                                                         
+.                                                                                                                                                                                                                                            
+..                                                                                                                                                                                                                                           
+big.txt                                                                                                                                                                                                                                      
+Client                                                                                                                                                                                                                                       
+client.c                                                                                                                                                                                                                                     
+common_includes.h                                                                                                                                                                                                                            
+Makefile                                                                                                                                                                                                                                     
+ReadMe                                                                                                                                                                                                                                       
+Server                                                                                                                                                                                                                                       
+server.c                                                                                                                                                                                                                                     
+test_run                                                                                                                                                                                                                                     
+$ HELP                                                                                                                                                                                                                                       
+         There are five basic commands to this utility:                                                                                                                                                                                      
+         1. LS                  - lists all the files and directories in the current folder                                                                                                                                                  
+         2. READ <file_path>    - trigger a read fop operation on server. The result will be given by ipc_utility's stdout                                                                                                                   
+         3. DELETE <file_path>  - trigger a delete fop operation on server and file will be deleted from server                                                                                                                              
+         4. CLEAR               - clear the terminal screen                                                                                                                                                                                  
+         5. HELP                - print this command information                                                                                                                                                                             
+         6. EXIT                - shutdown the server gracefully and cleanup. Always recommended instead of CTRL+C                                                                                                                           
+                         @SIST utility...                                                                                                                                                                                                    
+$ CLEAR 
+
+
+
+
+
+
+
+$ EXIT
+
+Terminating now...
+[vpandey@linux60806 P4]$ ./Client -i TCP -h linux.dc.engr.scu.edu -p 37426d
+
+Welcome to a SIST - Socket IPC Simulation Tool!
+         There are five basic commands to this utility:
+         1. LS                  - lists all the files and directories in the current folder
+         2. READ <file_path>    - trigger a read fop operation on server. The result will be given by ipc_utility's stdout
+         3. DELETE <file_path>  - trigger a delete fop operation on server and file will be deleted from server
+         4. CLEAR               - clear the terminal screen
+         5. HELP                - print this command information
+         6. EXIT                - shutdown the server gracefully and cleanup. Always recommended instead of CTRL+C
+                         @SIST utility...
+$ READ big.txt
+ Response received from Server: kjsdhklajsdh
+a sdljh
+asd kljha sd
+ aksjld
+a sdljna s;d ;las d
+ak;skd
+ a;lsd
+]as;kdm
+a'sl d'a;sd
+;k a
+sd
+;aksd
+ ;as'dlk
+
+
+
+$ DELETE big.txt
+ Response received from Server: File deleted!!!
+
+$ LS
+.
+..
+Client
+client.c
+common_includes.h
+Makefile
+ReadMe
+Server
+server.c
+test_run
+test_run_server
+$ EXIT
+
+Terminating now...
+[vpandey@linux60806 P4]$
+
+[vpandey@linux60807 P4]$ ./Client -i UDP -h 129.210.16.76 -p 54554
+
+Welcome to a SIST - Socket IPC Simulation Tool!
+         There are five basic commands to this utility: 
+         1. LS                  - lists all the files and directories in the current folder
+         2. READ <file_path>    - trigger a read fop operation on server. The result will be given by ipc_utility's stdout
+         3. DELETE <file_path>  - trigger a delete fop operation on server and file will be deleted from server           
+         4. CLEAR               - clear the terminal screen                                                               
+         5. HELP                - print this command information                                                          
+         6. EXIT                - shutdown the server gracefully and cleanup. Always recommended instead of CTRL+C        
+                         @SIST utility...
+$ READ big.txt
+ Response received from Server: File path "big.txt" does not exit.
+Please check the file path and try again.
+
+$ READ big.txt
+ Response received from Server: File path "big.txt" does not exit.
+Please check the file path and try again.
+
+$ LS
+.
+..
+big.txt
+Client
+client.c
+common_includes.h
+Makefile
+ReadMe
+Server
+server.c
+test_run
+test_run_client
+test_run_client~
+test_run_server
+test_run_server~
+$ READ big.txt
+ Response received from Server: jsas;ldja;lskd ;laksd
+ asl;kdj a
+'sd; ;kajs d
+al;ksd
+a s;dk a
+s dak s
+p dkak s
+dpk a
+psk d
+pak s
+dpk a
+ps
+as;dkj;lj a;sljd
+
+
+$ DELETE big.txt1
+ Response received from Server: File deleted!!!
+
+$ LS
+.
+..
+big.txt
+Client
+client.c
+common_includes.h
+Makefile
+ReadMe
+Server
+server.c
+test_run
+test_run_client
+test_run_client~
+test_run_server
+test_run_server~
+$ EXIT
+
+Terminating now...
+[vpandey@linux60807 P4]$
+
+
+[vpandey@linux60806 P4]$ ./Client -i TCP -h linux.dc.engr.scu.edu -p 54554
+
+Welcome to a SIST - Socket IPC Simulation Tool!
+open_ipc:299: "Fatal Error. Connection Failed!": Connection refused
+[vpandey@linux60806 P4]$ ./Client -i UDP -h linux.dc.engr.scu.edu -p 54554
+
+Welcome to a SIST - Socket IPC Simulation Tool!
+         There are five basic commands to this utility:
+         1. LS                  - lists all the files and directories in the current folder
+         2. READ <file_path>    - trigger a read fop operation on server. The result will be given by ipc_utility's stdout
+         3. DELETE <file_path>  - trigger a delete fop operation on server and file will be deleted from server
+         4. CLEAR               - clear the terminal screen
+         5. HELP                - print this command information
+         6. EXIT                - shutdown the server gracefully and cleanup. Always recommended instead of CTRL+C
+                         @SIST utility...
+$ READ big.txt
+ Response received from Server: jsas;ldja;lskd ;laksd
+ asl;kdj a
+'sd; ;kajs d
+al;ksd
+a s;dk a
+s dak s
+p dkak s
+dpk a
+psk d
+pak s
+dpk a
+ps
+as;dkj;lj a;sljd
+
+
+$ DELETE big.txt1
+ Response received from Server: File deleted!!!
+
+$ LS
+.
+..
+big.txt
+Client
+client.c
+common_includes.h
+Makefile
+ReadMe
+Server
+server.c
+test_run
+test_run_client
+test_run_client~
+test_run_server
+test_run_server~
+$ EXIT
+
+Terminating now...
+[vpandey@linux60806 P4]$
+
+
+
+
+
+
+
+

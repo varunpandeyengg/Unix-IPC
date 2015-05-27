@@ -1,0 +1,82 @@
+vpandey@linux60806 P4]$ ifconfig
+br6       Link encap:Ethernet  HWaddr 34:17:EB:BC:44:E7  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:128818 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0   
+          collisions:0 txqueuelen:0                              
+          RX bytes:7141948 (6.8 MiB)  TX bytes:0 (0.0 b)         
+
+eth0      Link encap:Ethernet  HWaddr 34:17:EB:BC:44:E7  
+          inet addr:129.210.16.76  Bcast:129.210.19.255  Mask:255.255.252.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:115436555 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:37628773 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:55999709308 (52.1 GiB)  TX bytes:25751183850 (23.9 GiB)
+          Interrupt:20 Memory:fb200000-fb220000
+
+eth0.5    Link encap:Ethernet  HWaddr 34:17:EB:BC:44:E7
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:13843 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0
+          RX bytes:1853318 (1.7 MiB)  TX bytes:0 (0.0 b)
+[vpandey@linux60806 P4]$ ./Server -i TCP
+
+Waiting for a client to connect...
+Press Ctrl+C to shutdown the server
+
+______________Connection Details_______________
+Server is located at the IP address: 192.168.20.1
+ and has been allocated a Server port: 37426
+_______________________________________________
+Connection Accepted!
+Accepting request from this client now...
+
+Server received the following command from client: 1:big.txt
+Server received the following command from client: 2:big1.txt
+Server received the following command from client: 2:big.txt1
+Peer has performed an orderedly shutdown
+Waiting for a client to connect...
+Press Ctrl+C to shutdown the server
+
+Connection Accepted!
+Accepting request from this client now...
+
+Server received the following command from client: 1:big.txt
+Server received the following command from client: 2:big.txt
+Peer has performed an orderedly shutdown
+Waiting for a client to connect...
+Press Ctrl+C to shutdown the server
+[vpandey@linux60806 P4]$ ./Server -i UDP
+
+Waiting for a client to connect...
+Press Ctrl+C to shutdown the server
+
+______________Connection Details_______________
+Server is located at the IP address: 192.168.20.1
+ and has been allocated a Server port: 54554
+_______________________________________________
+
+Server received the following command from client: 1:big.txt
+Server received the following command from client: 1:big.txt
+Server received the following command from client: 1:big.txt
+Server received the following command from client: 2:big.txt1
+
+[vpandey@linux60806 P4]$ ./Server -i UDP
+
+Waiting for a client to connect...
+Press Ctrl+C to shutdown the server
+
+______________Connection Details_______________
+Server is located at the IP address: 192.168.20.1
+ and has been allocated a Server port: 54554
+_______________________________________________
+
+Server received the following command from client: 1:big.txt
+Server received the following command from client: 1:big.txt
+Server received the following command from client: 1:big.txt
+Server received the following command from client: 2:big.txt1
+Server received the following command from client: 1:big.txt
+Server received the following command from client: 2:big.txt1
+

@@ -1,0 +1,56 @@
+   
+
+							Advanced IPC Simulation Tool - Read Me
+							=======================================
+
+Welcome to a AIST - Intermediate IPC Simulation Tool! This is a Read me file that will walk you through the basic functionality of the project.
+
+This project uses following files. All the files have individual help information. Please refer for details.
+	a. common_includes.h
+	b. server.c
+	c. cliet.c
+	d. Makefile
+	e. test_run
+	d. clean.sh
+
+You can use Make in the following mode: -
+	1. make - Builds the utility for you to run
+	2. make clean - Clears all the files generated due to build process or runtime
+	3. make debug - Builds the utility for you to debug using gdb
+
+Client module is responsible of taking user's request and transfering it to the Server. Client also invokes the server. This module 
+will implement 2 IPC mechanisms - posix shared memory and system V shared memory. If everything works alright, you will 
+see an internal commandline '$'. Press EXIT to terminate.
+
+The project is executed by running the client (./Client). This triggers Invokes Server by Cloning Client.
+ipc_utility has a UNIX style option where you specify the IPC that you want to use. Check the following: -
+./Client -i <ipc_name>                                                     
+         Following are the expected IPC name. Please Note that these are case sensitive.
+         3. POSIX_SHM                                                                 
+         4. SYSTEMV_SHM 
+
+Limited command size is imposed assuming that file path won't excceed PATH_MAX charecters. The max file size for reading is expected 
+to be 450 BYTES. Although it is small, this is doen for the simplicity of the code. Afterall, my focus here is to use various IPCs and 
+NOT file handling. Client Tokenizes the user i/p command by breaking the incoming commands 
+with boundary condition as - ' ' or '\n'
+
+Client uses the following protocol to communicate with the server. 
+		      <Command_number>:<file_path>
+
+Server simply rights the output and the result is displayed to user by the dumb client  
+
+Command Number used for the protocol are as follows - 
+        a. command_not_set = 0
+        b. command_read = 1
+        c. command_delete = 2
+        d. command_exit = 3
+	e. command_bad = 4
+
+
+There are five basic commands to this utility:
+	 1. LS - Lists all the files and folders in the currently active directory
+         2. READ <file_path> - trigger a read fop operation on server. The result will be given by client's stdout
+         3. DELETE <file_path> - trigger a delete fop operation on server and file will be deleted from server    
+         4. EXIT - shutdown the server gracefully and cleanup. Always recommended instead of CTRL+C               
+         5. CLEAR - clear the terminal screen                                                                     
+         6. HELP - print this command information    
